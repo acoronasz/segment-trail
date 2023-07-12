@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html>
+    <script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '',
+            autoLogAppEvents: true,
+            xfbml: true,
+            version: ''
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
     <head>
+        
         <title>AC Test page</title>
         <script>
           !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){if(window.analytics.initialized)return window.analytics[e].apply(window.analytics,arguments);var i=Array.prototype.slice.call(arguments);i.unshift(e);analytics.push(i);return analytics}};for(var i=0;i<analytics.methods.length;i++){var key=analytics.methods[i];analytics[key]=analytics.factory(key)}analytics.load=function(key,i){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=i};analytics._writeKey="ih4ZJ8vZsAcT4ZxKNihDEwj5PNsow2ph";;analytics.SNIPPET_VERSION="4.16.1";
@@ -11,5 +30,11 @@
     </head>
     <body>
         <p>Test page with Segment Analytics.js</p>
+
+        <div class="fb-customerchat"
+     page_id="112162395273579"
+     ref="<OPTIONAL_WEBHOOK_PARAM>"
+     minimized="<true|false>">
+</div>
     </body>
 </html>
